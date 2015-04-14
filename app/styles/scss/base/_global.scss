@@ -1,0 +1,7 @@
+// global styling
+body {
+	@include container(85%);
+}
+.main {
+	@include contrasted($color-susy);
+}
