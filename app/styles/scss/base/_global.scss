@@ -1,7 +1,30 @@
 // global styling
 body {
-	@include container(85%);
+	// @include container(85%);
+	@include full();
 }
 .main {
-	@include contrasted($color-susy);
+	padding: 50px;
+	text-align: center;
+	@include contrasted(aqua);
+	h1 {
+		padding: 30px;
+		font-size: 3em;
+	}
+	p {
+		padding: 15px;
+		font-size: 1.5em;
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+				&:after {
+					content: '!';
+				}
+			}
+		}
+	}
+	@include breakpoint($large){
+		@include contrasted($color-susy);
+	};
 }
